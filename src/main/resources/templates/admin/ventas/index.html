@@ -1,0 +1,32 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+<main layout:fragment="content">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Ventas</div>
+            <div class="card-body">
+                <table class="table table-sm table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Fecha Documento</th>
+                            <th>Numero de Documento</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="salida: ${salidas}">
+                            <td><a th:href="@{/admin/ventas/{id}(id=${salida.id})}" th:text="${salida.id}"></a></td>
+                            <td th:text="${salida.fechaDocumento}"></td>
+                            <td th:text="${salida.numeroDocumento}"></td>
+                            <td th:text="${salida.cliente.nombre}"></td>
+                            <td th:text="${#numbers.formatDecimal(salida.getTotal(), 1, 'COMMA', 2, 'POINT')}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+</html>

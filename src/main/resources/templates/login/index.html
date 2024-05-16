@@ -1,0 +1,44 @@
+<html lang="en" layout:decorate="~{layouts/webLayout}">
+<main layout:fragment="content">
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-login">
+                    <div class="card custom-card mt-3">
+                        <div class="card-body" style="max-height: 100%;">
+                            <h1 class="card-title">Iniciar Sesión</h1>
+                            <div class="alert alert-danger" th:if="${param.error}">
+                                Credenciales inválidas.
+                            </div>
+                            <div class="alert alert-success" th:if="${param.logout}">
+                                Ha cerrado sesión correctamente.
+                            </div>
+                            <form th:action="@{/login}" method="post">
+                                <div class="mb-3">
+                                    <label for="inputEmail3" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="inputEmail3" name="username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword3" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword3" name="password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-img">
+                    <img src="/images/img-login.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+</main>
+
+</html>

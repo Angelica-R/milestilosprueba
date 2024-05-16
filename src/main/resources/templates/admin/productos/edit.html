@@ -1,0 +1,57 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+<main layout:fragment="content">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Editar Producto</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img th:src="${producto.imagenUrl}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <form th:action="@{/admin/productos/update/{id}(id=${producto.id})}" th:object="${producto}" class="row g-3" method="post" enctype="multipart/form-data">
+                            <div class="col-12">
+                                <label for="descripcion" class="form-label">Descripción</label>
+                                <input type="text" class="form-control" id="descripcion" th:field="*{descripcion}" name="descripcion">
+                            </div>
+                            <div class="col-12">
+                                <label for="informacionGeneral" class="form-label">Información General</label>
+                                <textarea rows="3" class="form-control" id="informacionGeneral" th:field="*{informacionGeneral}"  />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="marca" class="form-label">Marca</label>
+                                <input type="text" class="form-control" id="marca" th:field="*{marca}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="precioVenta" class="form-label">Precio Venta</label>
+                                <input type="number" min="0" class="form-control" id="precioVenta" th:field="*{precioVenta}" >
+                            </div>
+                            <div class="col-md-4">
+                                <label for="stockMinimo" class="form-label">Stock Mínimo</label>
+                                <input type="number" min="0" class="form-control" id="stockMinimo" th:field="*{stockMinimo}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <select id="categoria" class="form-select"  th:field="*{categoria}">
+                                    <option th:value="Rimmel" th:text="Rimmel"></option>
+                                    <option th:value="Base" th:text="Base"></option>
+                                    <option th:value="Corrector" th:text="Corrector"></option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="image" class="form-label">Imagen del producto</label>
+                                <input class="form-control" type="file" id="image" name="image" accept="image/png, image/jpeg">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <a th:href="@{/admin/productos}" class="btn btn-secondary">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</html>

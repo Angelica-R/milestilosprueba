@@ -1,0 +1,50 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+<main layout:fragment="content">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Registrar Nuevo Producto</div>
+            <div class="card-body">
+                <form th:action="@{/admin/productos/save}" class="row g-3" method="post" enctype="multipart/form-data">
+                    <div class="col-12">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion">
+                    </div>
+                    <div class="col-12">
+                        <label for="informacionGeneral" class="form-label">Información General</label>
+                        <textarea rows="3" class="form-control" id="informacionGeneral" name="informacionGeneral"></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" name="marca">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="precioVenta" class="form-label">Precio Venta</label>
+                        <input type="number" min="0" class="form-control" id="precioVenta" name="precioVenta">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="stockMinimo" class="form-label">Stock Mínimo</label>
+                        <input type="number" min="0" class="form-control" id="stockMinimo" name="stockMinimo">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="categoria" class="form-label">Categoria</label>
+                        <select id="categoria" class="form-select" name="categoria">
+                            <option>Labial</option>
+                            <option>Paleta de Sombras</option>
+                            <option>Rimel</option>
+                            <option>Base</option>
+                            <option>Corrector</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="image" class="form-label">Imagen del producto</label>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" />
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</html>

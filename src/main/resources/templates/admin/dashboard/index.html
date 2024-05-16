@@ -1,0 +1,138 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+    
+<main layout:fragment="content">
+    <div class="row mb-3">
+        <div class="col-4">
+            <div class="card border-success">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4">S/. <span th:text="${#numbers.formatDecimal(totalVentasDelDia, 1, 'COMMA', 2, 'POINT')}"></span> </span>
+                            <span class="fs-6" th:text="${fechaHoy}"></span>
+                        </div>
+                        <i class="bi bi-cash fs-1 text-success"></i>
+                    </div>
+                </div>
+                <div class="card-footer text-center text-bg-success">
+                    Venta del Día
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-secondary">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <span class="fs-4">S/. <span th:text="${#numbers.formatDecimal(totalComprasDelMes, 1, 'COMMA', 2, 'POINT')}"></span></span>
+                            <span class="fs-6" th:text="${mesActual}"></span>
+                        </div>
+                        <i class="bi bi-bag fs-1 text-secondary"></i>
+                    </div>
+                </div>
+                <div class="card-footer text-center text-bg-secondary">
+                    Compra del Mes
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-center fw-bold">Ventas por validar</div>
+                <div class="card-body">
+                    <table class="table table-sm">
+                        <caption>Ventas por validar</caption>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Fecha Documento</th>
+                                <th>Fecha Hora Registro</th>
+                                <th>Vendedor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="ventaPorValidar: ${ventasPorValidar}">
+                                <td><a th:href="@{/admin/ventas/{id}(id=${ventaPorValidar.id})}" th:text="${ventaPorValidar.id}"></a></td>
+                                <td th:text="${ventaPorValidar.fechaDocumento}"></td>
+                                <td th:text="${ventaPorValidar.fechaHoraRegistro}"></td>
+                                <td th:text="${ventaPorValidar.vendedor}"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <label class="form-label" for="anio">Seleccione el año:</label>
+                            <div class="input-group">
+                                <input class="form-control form-control-sm" type="number" id="anio" name="anio" value="2024" min="2010" max="2030">
+                                <button class="btn btn-sm btn-success" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="container"></div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-center fw-bold">Productos a punto de agotarse</div>
+                <div class="card-body">
+                    <table class="table table-sm">
+                        <caption>Productos con poco stock</caption>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Producto 1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Producto 2</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script th:inline="javascript">
+        const ventasDelAnio = /*[[${ventasDelAnio}]]*/ []; //ventasDelAnio viene desde el controlador
+    </script>
+    <script th:src="@{/js/dashboard.js}"></script>
+</main>
+</html>

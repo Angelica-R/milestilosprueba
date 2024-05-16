@@ -1,0 +1,28 @@
+{"intents": [
+     {"tag": "saludo",
+      "patterns": ["Hola", "¿Cómo estás?", "¿Hay alguien ahí?", "Buenas tardes", "Buenos días", "¿Qué pasa"],
+      "responses": ["¡Hola!", "¡Qué bueno verte de nuevo!", "Hola, ¿en qué puedo ayudar?"],
+      "context_set": ""
+     },
+     {"tag": "adiós",
+      "patterns": ["chao", "Hasta luego", "Adiós", "Me voy", "Que tengas un buen día"],
+      "responses": ["Triste verte partir :(", "Hablamos luego", "¡Adiós!"],
+      "context_set": ""
+     },
+     {"tag": "tienda",
+      "patterns": ["Me gustaría comprar algo", "¿qué venden?", "¿qué me recomiendan?", "podría conseguirme algo"],
+      "responses": ["Vendemos cosméticos y articulos para el cuidado de la piel.", "¡Tenemos una variedad de cosméticos en marcas americanas!"],
+      "context_set": ""
+     },
+     {"tag": "dirección",
+      "patterns": ["¿De dónde eres?", "de dónde son?", "¿De qué ciudad eres?", "¿Cuál es tu dirección?"],
+      "responses": ["Somos de Tacna-Perú!. ubiquenos Av. Bolognesi #500"],
+      "context_set": ""
+     },
+     {"tag": "horas",
+      "patterns": ["cuándo están abiertos", "cuál es su horario", "horario de atención", "horario de oficina"],
+      "responses": ["¡El horario de atención es de 11 a. m. a 8 p. m. de lunes a viernes!"],
+      "context_set": ""
+     }
+]
+}

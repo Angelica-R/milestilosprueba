@@ -1,0 +1,485 @@
+@import url('https://fonts.cdnfonts.com/css/baloo');
+@import url('https://fonts.googleapis.com/css?family=Baloo 2');
+@import url('https://fonts.cdnfonts.com/css/barlow');
+body {
+    background: #FFFFFF;
+    font-size: 14px;
+    width: 95%;
+    margin: 0 auto
+}
+
+.container h1{
+    /*background: rgb(226, 164, 164);*/
+    color: #C55161;
+   font-family: 'Baloo 2', sans-serif;
+   font-size: 36px;
+   font-style: normal;
+   font-weight: bold;
+}
+
+
+.login-img img {
+    width: 100%;
+    height: auto;
+}
+
+.form-login {
+    padding: 20px; /* Ajusta el espaciado según tus necesidades */
+    border: none;
+}
+
+.logo img {
+    margin: 1rem;
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo a {
+    background: rgba(163, 31, 145, 0.330);
+    border-radius: 50%;
+    transition: background-color 1.5s ease-out;
+}
+
+.logo a:hover {
+    background-color: rgba(102, 14, 90, 0.568);
+}
+
+nav {
+    background-color: #FFFFFF;
+    text-align: center;
+    color: #000;
+    display: flex;
+}
+nav .titulo{
+    color: #EB9BAB;
+    text-align: center;
+    font-family: Baloo;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+nav ul {
+    margin-left: auto; /* Add this line to align the menu to the right */
+    display: flex;
+     font-size: 18px; /* Increase font size to 30px */
+}
+nav ul li {
+    margin-right: 25px;
+}
+nav ul li a {
+   color: #000;
+   text-align: center;
+   font-family: 'Baloo 2', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   transition: color 0.3s ease-out;
+}
+nav ul li a:hover {
+    color: #EB75A7;
+    font-weight: bold;
+    /*background: rgb(180, 70, 125);*/
+    /*transition: background-color 0.3s ease-out;*/
+}
+/*
+.login-button:hover {
+    background: rgb(180, 70, 125);
+    transition: background-color 0.3s ease-out;
+}*/
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.btn-buy {
+    background-color: #b70e21;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.btn-buy:hover {
+    background: #d63031;
+}
+
+.banner img {
+    width: auto;
+    height: auto;
+}
+.title-news {
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+    color: #333;
+    text-align: center;
+    font-family: Baloo 2;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+.card {
+    margin-bottom: 20px;
+    border: none;
+    /*min-height: 400px;*/
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.card-body {
+    background-color: #F3C4C4;
+    max-height: 200px;
+    overflow: hidden;
+
+}
+
+.card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+    border: none;
+    opacity: 0.9;
+}
+
+.card-text {
+  color: rgba(102, 0, 20, 0.49);
+  text-align: center;
+  font-family: 'Barlow';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+}
+
+.card-footer {
+    background-color: #F3C4C4;
+    border-top: none;
+    padding: 0.8rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .card-text {
+    color: rgba(102, 0, 20, 0.49);
+    font-size: 19px;
+}
+
+.btn-buy {
+    background-color: #DB8E8D;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.btn-buy:hover {
+    background: #CA7C7B;
+    color: white;
+}
+/*
+.card {
+    background-color: rgb(169, 184, 224);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease;
+}
+
+
+
+.card img {
+    transition: transform 1s;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card img:hover {
+    transform: scale(1.02);
+    border: 1px solid red;
+}*/
+
+
+.form-login form {
+    width: 100%;
+
+}
+
+.form-login .row {
+    margin-bottom: 1.5rem;
+}
+
+.form-login label {
+    font-weight: bold;
+}
+
+.form-login button {
+    background-color: #DB8E8D;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+}
+
+.form-login button:hover {
+    background: #CA7C7B;
+    transition: background-color 0.4s ease;
+}
+
+.form-login input {
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    border-radius: 15px;
+    background: #F9E3E3;
+    outline: 0;
+    color: #000;
+}
+
+
+.login-img img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-card {
+    border: none;
+}
+
+
+/*
+.btn-buy {
+    background-color: #b70e21;
+    color: #fff;
+}
+
+.btn-buy:hover {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+}*/
+
+.contact>* {
+    padding: 5em;
+}
+
+.contact-form {
+    background: #FFFFFF;
+    font-family: 'Baloo 2', sans-serif;
+    /*margin-left:200px;*/
+    margin: 0 150px 0 150px ;
+}
+
+.contact-form h1{
+   color: #C55161;
+   font-family: 'Baloo 2', sans-serif;
+   font-size: 36px;
+   font-style: normal;
+   font-weight: bold;
+}
+
+.contact-form form p {
+    margin: 0;
+}
+
+.contact-form form {
+    margin-top: 1.5rem;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;*/
+    gap: 1rem;
+}
+
+.contact-form form .block {
+    grid-column: 1/3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    border-radius: 15px;
+    background: #F9E3E3;
+    outline: 0;
+    color: #000;
+
+    /*border-bottom: 1px solid #d63031;*/
+}
+
+.contact-form form textarea {
+ border-radius: 15px;
+    background: #F9E3E3;
+    outline: 0;
+    color: #000;
+    }
+
+.contact-info form input {
+    margin: 1rem;
+}
+
+.contact-form form button {
+    font-weight: bold;
+    color: white;
+    border: 0;
+    padding: .7em;
+
+    border-radius: 15px;
+    background: #DB8E8D;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: rgba(232, 118, 141, 1);
+    transition: background-color 1s ease-out;
+    outline: none;
+    cursor: pointer;
+}
+
+.contact-info {
+    /*background: rgb(248, 178, 178);*/
+    margin-right: 200px;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info ul li {
+    padding: 0.2em;
+
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: rgb(27, 27, 170);
+}
+
+@media (min-width: 700px) {
+    .contact {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+.footer {
+    background: #FDFBF4;
+  /*  padding-top: 40px;*/
+    color: #000;
+
+}
+
+.footer-content {
+
+    background-color: rgba(253, 251, 244, 1);
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo 2', sans-serif;
+    justify-content: center;
+   /* flex-direction: column;
+    text -align: center;
+   padding: 20px;  Added padding for spacing */
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 500; /* Increased font weight for emphasis */
+    text-transform: uppercase; /* Uppercase for consistency */
+    line-height: 2.5rem; /* Adjusted line height for better spacing */
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px 30px 10px;
+    line-height: 24px; /* Adjusted line height for better readability */
+    font-size: 14px;
+    color: #000; /* Lightened text color for better contrast */
+}
+.footer-bottom {
+    background: #FDFBF4;/* Darkened background color for contrast */
+    padding: 15px 0; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.jck {
+    color: rgb(206, 42, 206);
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin: 20px 0 30px 0;  Increased margin for better spacing
+    padding-right: 80px;*/
+
+}
+
+.socials li {
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgba(102, 0, 20, 0.49);
+    transition: color 0.4s ease;
+}
+
+.socials a i {
+    font-size: 1.8rem; /* Increased social icon size */
+}
+
+.socials .face a:hover i {
+    color: rgba(243, 196, 196, 1);
+}
+
+.socials .ytub a:hover i {
+
+    color: rgba(243, 196, 196, 1);
+}
+
+

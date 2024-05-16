@@ -1,0 +1,78 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+<main layout:fragment="content">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Registrar Nueva Venta</div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="numeroDocumento" class="form-label">Numero documento</label>
+                        <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fechaDocumento" class="form-label">Fecha Documento</label>
+                        <input type="date" class="form-control" id="fechaDocumento" name="fechaDocumento">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cliente" class="form-label">Cliente</label>
+                        <div class="search-wrapper">
+                            <input type="text" class="form-control border border-success" id="cliente" name="cliente" onkeyup="realizarBusquedaCliente()">
+                            <div class="form-text fst-italic">Ingrese parte del nombre del cliente...</div>
+
+                            <div class="options-wrapper-clientes">
+                                <div id="options2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dni" class="form-label">Dni</label>
+                        <input type="text" readonly class="form-control" id="dni" name="dni">
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header text-center">Detalle de venta</div>
+                            <div class="card-body">
+                                <label for="nombre" class="form-label">Buscar Productos</label>
+                                <div class="search-wrapper">
+                                    <div class="input-group">
+                                        <input class="form-control border border-success" type="text" id="nombre" name="nombre" placeholder="Buscar por nombre"
+                                               onkeyup="realizarBusqueda()" aria-describedby="basic-addon4">
+                                        <button class="btn btn-outline-secondary" type="button" id="buscar-nombre" onclick="limpiar()">Limpiar</button>
+                                    </div>
+
+                                    <div class="form-text fst-italic" id="basic-addon4">Ingrese parte de la descripción del producto a buscar...</div>
+                                    <div class="options-wrapper">
+                                        <div id="options"></div>
+                                    </div>
+                                </div>
+                                <table class="table table-sm table-striped table-bordered mt-3">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-7">Descripción</th>
+                                        <th class="col-1">Stock</th>
+                                        <th class="col-1">Cantidad</th>
+                                        <th class="col-1">Precio Unitario</th>
+                                        <th class="col-1">Total</th>
+                                        <th class="col-1"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="productTableBody">
+                                    <!-- Aquí se llenarán las filas de la tabla con resultados -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+                        <button id="guardarVenta" type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/js/registroVentas.js}"></script>
+</main>
+</html>

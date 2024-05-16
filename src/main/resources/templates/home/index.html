@@ -1,0 +1,34 @@
+<html lang="en" layout:decorate="~{layouts/webLayout}">
+
+<main layout:fragment="content">
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Somos una tienda de Maquillaje en marcas Americanas originales y de buena calidad.</h1>
+            <a href="#" class="btn btn-buy">Comprar</a>
+        </div>
+        <img src="/images/banner-01.png" alt="banner">
+    </div>
+        <br />
+        <br />
+
+    <div class="container">
+        <h1 class="title-news">Novedades</h1>
+        <div class="row">
+            <div th:each="producto : ${productos}" class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img th:src="${producto.imagenUrl}" class="card-img-top" alt="p1">
+                    <div class="card-body">
+                        <p class="card-text" th:text="${producto.descripcion}"></p>
+                    </div>
+                    <div class="card-footer d-flex flex-column">
+                        <span class="card-text">S/. <span th:text="${producto.precioVenta}"></span></span>
+                        <a href="#" class="btn btn-buy">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</html>

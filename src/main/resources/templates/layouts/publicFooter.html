@@ -1,0 +1,20 @@
+<footer th:fragment="footer">
+    <div class="footer-content">
+        <!--<h3>MIL ESTILOS</h3>-->
+        <img src="/images/logo.jpg" alt="logo" width="96" height="auto">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae accusamus doloribus a quod ut.</p>
+        <ul class="socials">
+            <li class="face"><a href="https://web.facebook.com/Mil-Estilos-101982685074400" target="_blank"><i
+                        class="fab fa-facebook"></i></a></li>
+            <li class="ytub"><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; <span id="anio"></span>. Designed by: <span class="jck">Angelica Romero</span></p>
+    </div>
+
+    <script>
+        document.getElementById("anio").textContent = new Date().getFullYear();
+    </script>
+</footer>

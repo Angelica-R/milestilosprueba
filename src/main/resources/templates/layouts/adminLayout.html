@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mil Estilos</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/adminStyles.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="container-fluid overflow-hidden">
+    <div class="row vh-100 overflow-auto">
+        <div th:replace="~{layouts/adminSidebar :: sidebar}"></div>
+        <div class="col d-flex flex-column h-sm-100 py-2 bg-body-secondary">
+            <main class="row" layout:fragment="content"></main>
+            <div th:replace="~{layouts/adminFooter :: footer}"></div>
+        </div>
+    </div>
+</div>
+
+
+<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

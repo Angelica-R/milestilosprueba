@@ -1,0 +1,14 @@
+<html lang="en" layout:decorate="~{layouts/adminLayout}">
+<main layout:fragment="content">
+    <div class="col-6">
+        <div class="card">
+            <img th:src="${producto.imagenUrl}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${producto.descripcion}"></h5>
+                <div class="card-text" th:text="${producto.informacionGeneral}"></div>
+                <div class="card-text" th:text="${producto.stockMinimo}"></div>
+            </div>
+        </div>
+    </div>
+</main>
+</html>

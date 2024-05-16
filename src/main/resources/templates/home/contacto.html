@@ -1,0 +1,50 @@
+<html lang="en" layout:decorate="~{layouts/webLayout}">
+<main layout:fragment="content">
+    <div class="contact">
+        <div class="contact-form">
+            <h1>Contáctanos</h1>
+            <form action="">
+                <p>
+                    <label for="fullname">Nombre completo</label>
+                    <input type="text" name="fullname" id="fullname" required>
+                </p>
+                <p>
+                    <label>E-mail</label>
+                    <input type="email" name="email" required>
+                </p>
+                <p>
+                    <label>Celular</label>
+                    <input type="tel" name="phone" required>
+                </p>
+                <p>
+                    <label for="asunto">Asunto</label>
+                    <input type="text" name="affair" required>
+                </p>
+                <p class="block">
+                    <label>Mensaje</label>
+                    <textarea name="message" rows="3" required></textarea>
+                </p>
+                <p class="block">
+                    <button type="submit">Enviar mensaje</button>
+                </p>
+            </form>
+        </div>
+        <div class="contact-info">
+            <img src="/images/img-contacto.png" height="auto" width="450"/></div>
+
+
+        <!--<h4>Más información</h4>
+        <ul>
+            <li><i class="fab fa-whatsapp"></i> 964513350</li>
+            <li><a href="https://web.facebook.com/Mil-Estilos-101982685074400" target="_blank"><i
+                        class="fab fa-facebook"></i> facebook.com/milestilos</li></a>
+            <li><i class="fas fa-envelope-open-text"></i> contact@milestilos.com</li>
+        </ul>
+        <p>Somos una tienda de Maquillaje en marcas Americanas originales y de buena calidad.
+            Realizamos envíos a todo el Perú.</p>
+        <p>milestilos.com</p>-->
+    </div>
+    <br/>
+</main>
+
+</html>

@@ -20,7 +20,8 @@ public class ProveedorService {
         return this.proveedorRepository.findByNombreContaining(nombre);
     }
     public Proveedor getById(Integer id) {
-        return null;
+        Proveedor proveedor = this.proveedorRepository.findById(id).orElseThrow();
+        return proveedor;
     }
     public List<Proveedor> findAll() {
         return this.proveedorRepository.findAll();
